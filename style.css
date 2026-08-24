@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0; /*  บน ขวา ล่าง ซ้าย */
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('font/PK-Chiang-Mai-Medium.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.resgis_body,.login_body,.edit_body,.editpass {
+    background-image: url('img/v3.jpg');
+    background-size: cover;
+    font-size: 16px;
+    color: black;
+    font-family: 'MyFont', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px;
+    overflow: hidden;
+}
+.Home_page{
+    font-family: 'MyFont', sans-serif;
+    background-image: url('img/home_bg.jpg');
+    background-size: cover;
+}
+form {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    border-radius: 35px;
+    opacity: 0.8;
+}
+.login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+legend {
+    font-size: 35px;
+    margin: 0px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    color: red;
+    opacity: 1;
+}
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+fieldset{
+    color: black;
+    width: 100%;
+    max-width: 380px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.btn1 input{
+    background-color: skyblue; 
+    color: black;
+    font-family: 'MyFont', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 100%;    
+}
+.btn2{   
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px; 
+    text-align: right;
+    text-decoration: underline red;
+}
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px; 
+    font-weight: bold;   
+}
+.dataedit input[type="submit"], input[type="reset"]{
+    background-color: skyblue; 
+    width: 100%;
+    padding: 8px;
+    font-family: 'MyFont', sans-serif;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.editpass input[type="password"]{
+    background-color: skyblue; 
+    width: 100%;
+    padding: 8px;
+    font-family: 'MyFont', sans-serif;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn_regis1 input[type="submit"]{
+    background-color: skyblue; 
+    color: black;
+    font-family: 'MyFont', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: 100%;   
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 40px;       
+    z-index: 1001; 
+    flex-direction: column; 
+    align-items: flex-start;  
+    width: 95%;           
+    min-height: 0px; 
+}
+.container{
+    position: relative;
+    min-height: 100vh;
+    
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bg::after{
+    background-image: url('img/home_bg.jpg');
+    overflow: hidden;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(45%);
+}
+.menu{
+
+    position: sticky;
+    z-index: 1000;
+    width: 85%;
+    height: 15vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+ .menu a{
+    text-decoration: none;
+}
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+    align-items: center; 
+}
+.menu ul li{
+    padding: 0 17px;
+}
+.menu ul li a{
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+}
+.content2{
+    width: 85%;
+    margin:0 auto;
+    position: absolute;
+    top:60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.content2 .header_index,.grid-card{
+    width: 50%;
+    position: relative;
+}
+.content2 .header_index{
+    color: #fff;
+    padding: 20px;
+}
+.content2 .header_index h3{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.content2 .header_index h3 i{
+    color:  orange;
+}
+.content2 .header_index h1 {
+    font-size: 5rem;
+}
+.content2 .header_index p {
+    opacity: 0.6;
+}
+.grid-card{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px;
+}
+.grid-card .box{
+    width: 100%;
+    height: 230px;
+    background: red;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    position: relative;
+    transition: .4s;
+}
+.grid-card .bg1{
+    background-image: url('img/card_mountain.jpg');
+}
+.grid-card .bg2{
+    background-image: url('img/card_temple.jpg');
+}
+.grid-card .bg3{
+    background-image: url('img/card_shopping.jpg');
+}
+.grid-card .bg4{
+    background-image: url('img/card_family.jpg');
+}
+.content2 .box h2{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+.content2 .box:hover{
+    transform: translateY(-15px);
+}
+
+section {
+    padding: 80px 10% 40px 10%; 
+    min-height: 400px; 
+}
+
+#about {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#news {
+    background-color: #f4f4f4;
+}
+
+#news h1 {
+    border-left: 8px solid #fd7e13; 
+    padding-left: 15px;
+    color: #333;
+}
+
+#service h1 {
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+}
+.news_1{
+    background: red;
+}
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    width: 90%;         
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+.news-card {
+    width: 100%;         
+    background: white;   
+    border-radius: 20px;
+    overflow: hidden;   
+    box-shadow: 0 10px 25px rgba(173, 216, 230, 1); 
+    display: flex;      
+    flex-direction: column; 
+    height: auto;       
+}
+.news-img {
+    width: 100%;         
+    height: 200px;      
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.news-detail{
+    width: 100%;
+    height: 230px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    position: relative;
+    transition: .4s;
+    padding: 20px;
+    background: white;
+    overflow: auto;
+}
+.news-detail h3 {
+    margin: 0 0 10px 0;
+    color: #fd7e13;        
+    font-size: 1.4rem;
+}
+.news-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+/*  */
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn-edit {
+    background: #ffc107;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-add {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
